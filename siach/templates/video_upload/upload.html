@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{%block title%}Video Upload{%endblock title%}
+
+{% block content %}
+  {% if submitted %}
+    <p class = "success">Your video was submitted successfully. Thank you.</p>
+  {% else %}
+    <form action="" enctype="multipart/form-data" method="post" novalidate>
+      <table>
+        {{ form.as_table}}
+      </table>
+{% endblock content %}
